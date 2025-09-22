@@ -13,11 +13,11 @@ export default function Portfolio() {
     <div className="min-h-screen bg-gray-50 text-gray-900 antialiased">
       {/* Header */}
       <header className="bg-white shadow-sm">
-        <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="w-full px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-4">
-            <div className="w-12 h-12 rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center">
+            <div className="w-20 h-20 rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center">
               {/* Place your photo in public/ as 1735576273838.jpeg */}
-              <img src="/1735576273838.jpeg" alt="Saad Bilal" className="w-full h-full object-cover" />
+              <img src={`${import.meta.env.BASE_URL}1735576273838.jpeg`} alt="Saad Bilal" className="w-full h-full object-cover" />
             </div>
             <div>
               <h1 className="text-lg font-semibold">Saad Bilal</h1>
@@ -35,7 +35,7 @@ export default function Portfolio() {
         </div>
       </header>
 
-      <main className="max-w-6xl mx-auto px-6 py-12">
+      <main className="w-full px-6 py-12">
         {/* HERO */}
         <section className="grid md:grid-cols-2 gap-8 items-center">
           <div>
@@ -43,7 +43,7 @@ export default function Portfolio() {
             <p className="mt-4 text-gray-700 leading-relaxed">Senior Full-Stack Developer with 10+ years building cross-platform mobile apps, backend services, and AI-enabled systems. I work with TypeScript, Python (Django / FastAPI), cloud-native patterns (Docker, Kubernetes, AWS), and modern mobile stacks (Flutter, React Native, native Android/iOS).</p>
 
             <div className="mt-6 flex flex-wrap gap-3">
-              <a href="mailto:saadpucit@gmail.com" className="px-4 py-2 rounded-md bg-indigo-600 text-white text-sm">Email me</a>
+              <a href="mailto:saadpucit@gmail.com" className="px-4 py-2 rounded-md bg-indigo-600 text-white hover:text-white focus:text-white active:text-white visited:text-white focus-visible:text-white selection:text-white text-sm">Email me</a>
               <a href="https://www.linkedin.com/in/saadbilal" target="_blank" rel="noreferrer" className="px-4 py-2 rounded-md bg-gray-100 text-gray-800 text-sm border">LinkedIn</a>
               <a href="https://github.com/SaadBilal" target="_blank" rel="noreferrer" className="px-4 py-2 rounded-md bg-gray-100 text-gray-800 text-sm border">GitHub</a>
               <a href="https://saadbilal.github.io/whoami" target="_blank" rel="noreferrer" className="px-4 py-2 rounded-md bg-gray-100 text-gray-800 text-sm border">Portfolio page</a>
@@ -108,39 +108,127 @@ export default function Portfolio() {
         {/* EXPERIENCE */}
         <section id="experience" className="mt-12">
           <h3 className="text-2xl font-semibold">Experience</h3>
-          {/* ... experience cards remain unchanged ... */}
+          <div className="mt-6 space-y-6">
+            {/* YouAttest */}
+            <article className="bg-white p-6 rounded-lg shadow">
+              <header className="flex items-start justify-between">
+                <div>
+                  <h4 className="font-semibold">Senior Software Development Engineer — YouAttest</h4>
+                  <p className="text-sm text-gray-600">December 2024 — Present • California, United States</p>
+                </div>
+              </header>
+              <div className="mt-3 text-gray-700 text-sm">
+                <ul className="list-disc ml-5 space-y-2">
+                  <li>Build automation for user access and compliance workflows using Python and cloud services.</li>
+                  <li>Integrate identity platforms and automate audits to reduce manual effort and cost.</li>
+                  <li>Consult on secure architecture patterns for regulated environments.</li>
+                </ul>
+              </div>
+            </article>
+
+            {/* siParadigm */}
+            <article className="bg-white p-6 rounded-lg shadow">
+              <header className="flex items-start justify-between">
+                <div>
+                  <h4 className="font-semibold">Development Lead – Mobile & Backend/Cloud — siParadigm Diagnostic Informatics</h4>
+                  <p className="text-sm text-gray-600">Dec 2023 — Nov 2024 • Pakistan</p>
+                </div>
+              </header>
+              <div className="mt-3 text-gray-700 text-sm">
+                <ul className="list-disc ml-5 space-y-2">
+                  <li>Architected AWS solutions (EC2, S3, RDS, Lambda) and reduced infrastructure costs by ~20%.</li>
+                  <li>Implemented CI/CD with CodePipeline and CodeDeploy; improved deployment velocity and reliability.</li>
+                  <li>Built backend services with Django & FastAPI and integrated AI/ML models.</li>
+                </ul>
+              </div>
+            </article>
+
+            {/* Enbridge Sustain */}
+            <article className="bg-white p-6 rounded-lg shadow">
+              <header className="flex items-start justify-between">
+                <div>
+                  <h4 className="font-semibold">Lead Mobile Developer — Enbridge Sustain</h4>
+                  <p className="text-sm text-gray-600">Mar 2024 — Sep 2024 • Canada</p>
+                </div>
+              </header>
+              <div className="mt-3 text-gray-700 text-sm">
+                <ul className="list-disc ml-5 space-y-2">
+                  <li>Led development of Android & iOS applications; integrated SAP BTP mobile services.</li>
+                  <li>Mentored teams, enforced secure DevOps practices, and optimized mobile-to-cloud flows.</li>
+                </ul>
+              </div>
+            </article>
+
+            {/* SwipBox (summary) */}
+            <article className="bg-white p-6 rounded-lg shadow">
+              <header className="flex items-start justify-between">
+                <div>
+                  <h4 className="font-semibold">Lead Software Engineer — SwipBox</h4>
+                  <p className="text-sm text-gray-600">Jul 2021 — Nov 2023 • Pakistan</p>
+                </div>
+              </header>
+              <div className="mt-3 text-gray-700 text-sm">
+                <ul className="list-disc ml-5 space-y-2">
+                  <li>Delivered cross-platform mobile solutions (React Native, Flutter) and serverless Node.js APIs.</li>
+                  <li>Acted as technical architect and improved delivery processes.</li>
+                </ul>
+              </div>
+            </article>
+          </div>
         </section>
 
         {/* PROJECTS */}
         <section id="projects" className="mt-12">
           <h3 className="text-2xl font-semibold">Selected Projects</h3>
-          {/* ... project cards remain unchanged ... */}
-        </section>
-
-        {/* CONTRIBUTIONS */}
-        <section id="contributions" className="mt-12">
-          <h3 className="text-2xl font-semibold">Open‑Source Contributions & GitHub Activity</h3>
           <div className="mt-6 grid md:grid-cols-2 gap-6">
             <div className="bg-white p-6 rounded-lg shadow">
-              <h4 className="font-semibold">GitHub summary</h4>
-              <p className="mt-2 text-sm text-gray-700">A snapshot of my public activity and notable repositories. Live widgets update automatically when linked to my GitHub account.</p>
-              <div className="mt-4 flex flex-col gap-3">
-                <a href="https://github.com/SaadBilal" target="_blank" rel="noreferrer">
-                  <img src="https://github-readme-stats.vercel.app/api?username=SaadBilal&show_icons=true&theme=radical" alt="GitHub stats" />
-                </a>
-                <a href="https://github.com/SaadBilal" target="_blank" rel="noreferrer">
-                  <img src="https://github-profile-trophy.vercel.app/?username=SaadBilal" alt="GitHub trophies" />
-                </a>
-              </div>
+              <h4 className="font-semibold">AI-powered Compliance Automation</h4>
+              <p className="mt-2 text-sm text-gray-700">A Python-based automation engine for user access reviews and compliance checks, integrated with identity providers and cloud infra automation.</p>
+              <div className="mt-3 text-xs text-gray-500">Tech: Python, AWS Lambda, DynamoDB, CloudFormation</div>
             </div>
             <div className="bg-white p-6 rounded-lg shadow">
-              <h4 className="font-semibold">Recent & notable contributions</h4>
-              <ul className="mt-3 text-sm text-gray-700 list-disc ml-5 space-y-2">
-                <li>Maintainer / contributor to internal tools and public repos.</li>
-                <li>Published utilities for mobile app testing and CI automation.</li>
-                <li>Active in code reviews, open-source issue triage, and mentoring junior contributors.</li>
+              <h4 className="font-semibold">Mobile Fleet App (Android & iOS)</h4>
+              <p className="mt-2 text-sm text-gray-700">End-to-end mobile solution for field operations with offline sync and secure APIs.</p>
+              <div className="mt-3 text-xs text-gray-500">Tech: Kotlin, Swift, React Native, GraphQL</div>
+            </div>
+          </div>
+        </section>
+
+        {/* STATS & ARTICLES */}
+        <section id="stats-articles" className="mt-12">
+          <h3 className="text-2xl font-semibold">Highlights & Articles</h3>
+          <div className="mt-6 grid md:grid-cols-3 gap-6">
+            {/* GitHub stats summary (static placeholders; replace with live data if desired) */}
+            <div className="rounded-lg shadow p-6 bg-gradient-to-br from-indigo-600 via-fuchsia-600 to-pink-500 text-white">
+              <h4 className="font-semibold">GitHub stats</h4>
+              <ul className="mt-3 space-y-1 text-sm/6">
+                <li className="flex items-center justify-between"><span>Public repos</span><span className="font-semibold">—</span></li>
+                <li className="flex items-center justify-between"><span>Stars</span><span className="font-semibold">—</span></li>
+                <li className="flex items-center justify-between"><span>Contributions (year)</span><span className="font-semibold">—</span></li>
               </ul>
-              <div className="mt-4 text-sm text-gray-600">Quick links: <a href="https://github.com/SaadBilal" target="_blank" rel="noreferrer" className="text-indigo-600">GitHub</a> • <a href="https://github.com/SaadBilal?tab=repositories" target="_blank" rel="noreferrer" className="text-indigo-600">Repos</a></div>
+              <a href="https://github.com/SaadBilal" target="_blank" rel="noreferrer" className="mt-4 inline-block px-3 py-1.5 rounded bg-white/15 hover:bg-white/25 text-white">View profile</a>
+            </div>
+
+            {/* LinkedIn Articles */}
+            <div className="bg-white p-6 rounded-lg shadow md:col-span-2">
+              <h4 className="font-semibold">Latest LinkedIn articles</h4>
+              <p className="mt-2 text-sm text-gray-700">A selection of recent posts from my LinkedIn. Click to read on LinkedIn.</p>
+              <ul className="mt-4 grid sm:grid-cols-2 gap-4 text-sm">
+                {[
+                  { title: "Article 1 title", href: "https://www.linkedin.com/in/saadbilal/details/recent-activity/" },
+                  { title: "Article 2 title", href: "https://www.linkedin.com/in/saadbilal/details/recent-activity/" },
+                  { title: "Article 3 title", href: "https://www.linkedin.com/in/saadbilal/details/recent-activity/" },
+                  { title: "Article 4 title", href: "https://www.linkedin.com/in/saadbilal/details/recent-activity/" },
+                ].map((a, i) => (
+                  <li key={i} className="group">
+                    <a href={a.href} target="_blank" rel="noreferrer" className="block p-3 rounded border bg-gray-50 hover:bg-white">
+                      <span className="font-medium text-gray-900 group-hover:text-indigo-700">{a.title}</span>
+                      <div className="mt-1 text-gray-600">linkedin.com • external</div>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-4 text-sm text-gray-600">More on <a href="https://www.linkedin.com/in/saadbilal/details/recent-activity/" target="_blank" rel="noreferrer" className="text-indigo-700 underline">LinkedIn profile</a></div>
             </div>
           </div>
         </section>
@@ -152,7 +240,7 @@ export default function Portfolio() {
       </main>
 
       <footer className="bg-white border-t py-6 mt-12">
-        <div className="max-w-6xl mx-auto px-6 text-sm text-gray-600 flex flex-col md:flex-row items-center justify-between">
+        <div className="w-full px-6 text-sm text-gray-600 flex flex-col md:flex-row items-center justify-between">
           <div>© {new Date().getFullYear()} Saad Bilal — Senior Software Development Consultant</div>
           <div className="mt-3 md:mt-0">Built with React + Tailwind • <a href="#contact" className="underline">Contact</a></div>
         </div>
